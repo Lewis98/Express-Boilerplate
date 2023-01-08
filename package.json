@@ -1,0 +1,29 @@
+{
+  "name": "-project-name-",
+  "version": "1.0.0",
+  "description": "-project-description-",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lewis98/Express-Boilerplate.git"
+  },
+  "keywords": [
+    "Template"
+  ],
+  "author": "Lewis Stokes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lewis98/Express-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/Lewis98/Express-Boilerplate#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
