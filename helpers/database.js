@@ -1,3 +1,11 @@
+/**
+ * Database connector module
+ * 
+ * @module helpers/database
+ * @author Lewis Stokes
+ * @changelog
+ */
+
 //const sqlite3 = require('sqlite3').verbose()
 
 /*
@@ -11,6 +19,13 @@ const db = new sqlite3.Database('debug.db', (err) => {
 */
 
 
+/**
+ *  Read query 
+ * 
+ * @description Function for database read
+ * @param {object} query - Database query
+ * @param {object} data - Data for query
+ */
 module.exports.get = async (query, data) => {
     try {
         
