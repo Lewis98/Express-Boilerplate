@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose()
 
-const db = new sqlite3.Database('../debug/debug.db', (err) => {
+const db = new sqlite3.Database('debug.db', (err) => {
     if (err) {
         console.error(err.message);
     }else{
@@ -11,15 +11,17 @@ const db = new sqlite3.Database('../debug/debug.db', (err) => {
 
 module.exports.get = async (query, data) => {
     try {
-
-        await db.open('./activart.db');
-
-        const result = await db.all(query, data)    
         
+        // Database query logic here
 
-        await db.close();
-
-        return result
+        console.log(`Database query '${query}' \nExecuted with data :`)
+        console.table(data)
+        
+        return {
+            id : 1,
+            name : "debug",
+            data : [5, 7, 9]
+        }
         
     } catch (err) {
         console.log(err)        
