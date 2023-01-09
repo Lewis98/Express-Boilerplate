@@ -1,5 +1,6 @@
-const sqlite3 = require('sqlite3').verbose()
+//const sqlite3 = require('sqlite3').verbose()
 
+/*
 const db = new sqlite3.Database('debug.db', (err) => {
     if (err) {
         console.error(err.message);
@@ -7,6 +8,7 @@ const db = new sqlite3.Database('debug.db', (err) => {
         console.log('Connected to database');
     }
 });
+*/
 
 
 module.exports.get = async (query, data) => {
