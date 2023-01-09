@@ -16,7 +16,8 @@ const model = require('../models/debug.js');
  *  HelloWorld
  * 
  * @description Hello world
- * @param {object} ctx - Context of HTTP Request
+ * @param {object} req - HTTP Request object
+ * @param {object} req - HTTP Response object
  */
  router.get('/', (req, res) => {
     // Route specific logic goes here
@@ -28,14 +29,24 @@ const model = require('../models/debug.js');
 })
 
 /**
- *  HelloWorld
+ *  DBQueryTestSelect
  * 
  * @description Hello world
- * @param {object} ctx - Context of HTTP Request
+ * @param {object} req - HTTP Request object
+ * @param {object} req - HTTP Response object
  */
- router.post('/', (req, res) => {
-    res.status(200)
-    res.send("Post response")
+ router.get('/db', async (req, res) => {
+    
+    console.log("Waiting on model")
+    const data = await model.DBQueryTestSelect()
+
+    if (data) {
+        res.status(200)
+        res.send(data)
+    }else{
+        res.status(500)
+        res.send("Debug db query failed")
+    }
 })
 
 
